@@ -101,7 +101,7 @@ class DBProvider {
   // Elimina un escaneig per ID
   Future<int> deleteScanById(int id) async {
     final db = await database;
-    final res = await db.delete('Scans', where: 'id = ?', whereArgs: [id]);
+    final res = await db.rawDelete(''' DELETE  FROM Scans Where id = $id ''');
     return res;
   }
 

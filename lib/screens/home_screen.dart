@@ -45,7 +45,7 @@ class _HomeScreenBody extends StatelessWidget {
     // Obtenim l'índex actual per canviar entre les pantalles
     final currentIndex = uiProvider.selectedMenuOpt;
     
-    final scanListProvider = Provider.of<ScanListProvider>(context);
+    final scanListProvider = Provider.of<ScanListProvider>(context, listen: false);
 
     // Segons l'índex actual, mostrem la pantalla corresponent
     switch (currentIndex) {
